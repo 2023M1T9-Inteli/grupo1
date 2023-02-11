@@ -10,7 +10,7 @@
 
 ## Cia De Skills
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Goku Sayajin</a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
+## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Nicollas Isaac</a>, <a href="https://www.linkedin.com/in/victorbarq/">Michel Khafif</a>, <a href="https://www.linkedin.com/in/victorbarq/">Lucas Rego</a>, <a href="https://www.linkedin.com/in/victorbarq/">Pedro Lima</a>, <a href="https://www.linkedin.com/in/victorbarq/">Guilherme Linhares</a>, <a href="https://www.linkedin.com/in/victorbarq/">Luiz Leao</a>, <a href="https://www.linkedin.com/in/victorbarq/">Beatriz Monsanto</a>, <a href="https://www.linkedin.com/in/victorbarq/">Lidia Mariano</a>
 
 ## Descrição
 
