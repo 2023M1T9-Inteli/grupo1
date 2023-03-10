@@ -1,0 +1,13 @@
+[
+    {"Name": "André", "Text": "Olá Rafa, o que está achando do nosso projeto?"},
+    {"Name": "Rafa", "Text": "Oi André, estou gostando bastante e você? O que está achando?"},
+    {"Name": "André", "Text": "Olha, vou ser sincero, estou contente com a ideia que conseguimos desenvolver, mas eu não suporto o Thomas, ele é muito folgado."},
+    {"Name": "Rafa", "Text": "Mas por que você acha isso?"},
+    {"Name": "André", "Text": "Ele sempre pede para eu realizar as tarefas dele, nunca consegue entregar as atividades a tempo. Isso me desmotiva muito."},
+    {"Name": "Rafa", "Text": "Já parou para pensar que o Thomas pode estar tendo dificuldade com as tarefas que foram pedidas a ele?"},
+    {"Name": "André", "Text": "Você está defendendo o Thomas? Pensei que estivesse do meu lado."},
+    {"Name": "Rafa", "Text": "Não é isso que você está pensando, apenas cogitei uma possibilidade."},
+    {"Name": "André", "Text": "Bom... Só queria dizer que se continuar assim eu vou pedir ao chefe para sair do projeto."},
+    {"Name": "Rafa", "Text": "Mas você não pode simplesmente abandonar o projeto. Você é importante para a equipe."},
+    {"Name": "André", "Text": "Com o Thomas na equipe eu não fico."},
+]

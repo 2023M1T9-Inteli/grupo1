@@ -1,0 +1,585 @@
+[gd_scene load_steps=44 format=2]
+
+[ext_resource path="res://players/cena_1/PlayerProtagonista.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Ui/fundo baixo esquerda vermelho.jpeg" type="Texture" id=2]
+[ext_resource path="res://scripts/cena1/cena_1.gd" type="Script" id=3]
+[ext_resource path="res://assets/6_Office_Designs/parede_e_movel_cenario1.png" type="Texture" id=4]
+[ext_resource path="res://assets/mapas/cena112.png" type="Texture" id=5]
+[ext_resource path="res://assets/characters/Eli.png" type="Texture" id=6]
+[ext_resource path="res://assets/characters/Character_040.png" type="Texture" id=7]
+[ext_resource path="res://players/cena_1/eli_Rh_player.gd" type="Script" id=8]
+[ext_resource path="res://assets/buttons/Keyboard Letters and Symbols.png" type="Texture" id=9]
+[ext_resource path="res://assets/fontes/VT323-Regular.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://scripts/cena1/DialogBox_cena1.gd" type="Script" id=11]
+[ext_resource path="res://assets/aúdios/music_2_cena1.mp3" type="AudioStream" id=12]
+[ext_resource path="res://assets/aúdios/botões no pause.wav" type="AudioStream" id=13]
+[ext_resource path="res://assets/buttons/Keyboard Extras.png" type="Texture" id=17]
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 9, 61 )
+
+[sub_resource type="RectangleShape2D" id=27]
+extents = Vector2( 319, 9 )
+
+[sub_resource type="RectangleShape2D" id=28]
+extents = Vector2( 232, 8 )
+
+[sub_resource type="RectangleShape2D" id=31]
+extents = Vector2( 177.5, 54 )
+
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 83.375, 45.1875 )
+
+[sub_resource type="RectangleShape2D" id=32]
+extents = Vector2( 29, 10.5 )
+
+[sub_resource type="RectangleShape2D" id=33]
+extents = Vector2( 18.5, 10 )
+
+[sub_resource type="RectangleShape2D" id=34]
+extents = Vector2( 52, 30.5 )
+
+[sub_resource type="Animation" id=12]
+resource_name = "andandobaixo"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 12, 13, 14, 15 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "andandocima"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 60, 61, 62, 63 ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "andandoladod"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 44, 45, 46, 47 ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "andandoladoe"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 28, 29, 30, 31 ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "idle"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 13 ]
+}
+
+[sub_resource type="CapsuleShape2D" id=11]
+height = 12.0
+
+[sub_resource type="Animation" id=6]
+resource_name = "andandobaixo"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 12, 13, 14, 15 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "andandocima"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 60, 61, 62, 63 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "andandoladod"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 44, 45, 46, 47 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "andandoladoe"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 28, 29, 30, 31 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "idle"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 13 ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "idle"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "pressionando"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 2, 58, 2 ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "idle"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "pressionando"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 59, 3 ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "pressionando"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 16, 0 ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "pressionando"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 7, 23, 7 ]
+}
+
+[sub_resource type="DynamicFont" id=25]
+size = 18
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 10 )
+
+[sub_resource type="Animation" id=26]
+resource_name = "movendo"
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.45, 0.8, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 4, 5 ), Vector2( 4, 3 ), Vector2( 4, 5 ), Vector2( 4, 3 ) ]
+}
+
+[node name="cena_1" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="cenario" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="FundoBaixoEsquerdaVermelho" type="Sprite" parent="cenario"]
+position = Vector2( 321.01, 186 )
+scale = Vector2( 0.628887, 0.621018 )
+texture = ExtResource( 2 )
+
+[node name="Cena112" type="Sprite" parent="cenario"]
+position = Vector2( 321.5, 134 )
+scale = Vector2( 1.00469, 1 )
+texture = ExtResource( 5 )
+
+[node name="paredesInvisiveis" type="StaticBody2D" parent="cenario"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario/paredesInvisiveis"]
+position = Vector2( -8, 88 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="cenario/paredesInvisiveis"]
+position = Vector2( 323, 56 )
+shape = SubResource( 27 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="cenario/paredesInvisiveis"]
+position = Vector2( 405, 315 )
+shape = SubResource( 28 )
+
+[node name="collisionRafa" type="CollisionShape2D" parent="cenario/paredesInvisiveis"]
+position = Vector2( 178.5, 197 )
+shape = SubResource( 31 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="cenario/paredesInvisiveis"]
+position = Vector2( 538.25, 238.188 )
+shape = SubResource( 29 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="cenario/paredesInvisiveis"]
+position = Vector2( 695, 80 )
+shape = SubResource( 29 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="cenario/paredesInvisiveis"]
+position = Vector2( 403, 89.5 )
+shape = SubResource( 32 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="cenario/paredesInvisiveis"]
+position = Vector2( 630.5, 194 )
+shape = SubResource( 33 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="cenario/paredesInvisiveis"]
+position = Vector2( 226, 278.5 )
+shape = SubResource( 34 )
+
+[node name="player" type="KinematicBody2D" parent="."]
+visible = false
+position = Vector2( 280, 88 )
+
+[node name="Sprite" type="Sprite" parent="player"]
+scale = Vector2( 1.833, 1.833 )
+texture = ExtResource( 7 )
+hframes = 16
+vframes = 4
+frame = 44
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="player"]
+anims/andandobaixo = SubResource( 12 )
+anims/andandocima = SubResource( 13 )
+anims/andandoladod = SubResource( 14 )
+anims/andandoladoe = SubResource( 15 )
+anims/idle = SubResource( 16 )
+
+[node name="collision" type="CollisionShape2D" parent="player"]
+position = Vector2( 0, 4 )
+shape = SubResource( 11 )
+
+[node name="eli_Rh_player" type="KinematicBody2D" parent="."]
+position = Vector2( 311, 280 )
+script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="eli_Rh_player"]
+position = Vector2( 9.996, -6.004 )
+scale = Vector2( 1.833, 1.833 )
+texture = ExtResource( 6 )
+hframes = 16
+vframes = 4
+frame = 12
+
+[node name="anim" type="AnimationPlayer" parent="eli_Rh_player"]
+anims/andandobaixo = SubResource( 6 )
+anims/andandocima = SubResource( 7 )
+anims/andandoladod = SubResource( 8 )
+anims/andandoladoe = SubResource( 9 )
+anims/idle = SubResource( 10 )
+
+[node name="collision2" type="CollisionShape2D" parent="eli_Rh_player"]
+position = Vector2( 8.99597, -2.004 )
+shape = SubResource( 11 )
+
+[node name="protagonistaPlayer" parent="." instance=ExtResource( 1 )]
+position = Vector2( 71, 113 )
+
+[node name="botTutorials" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="botesquerda" type="Sprite" parent="botTutorials"]
+position = Vector2( 264, 341.75 )
+scale = Vector2( 2.375, 2.375 )
+texture = ExtResource( 9 )
+hframes = 8
+vframes = 14
+frame = 2
+
+[node name="enterAnim" type="AnimationPlayer" parent="botTutorials/botesquerda"]
+anims/idle = SubResource( 23 )
+anims/pressionando = SubResource( 24 )
+
+[node name="botdireita" type="Sprite" parent="botTutorials"]
+position = Vector2( 299, 341.75 )
+scale = Vector2( 2.375, 2.375 )
+texture = ExtResource( 9 )
+hframes = 8
+vframes = 14
+frame = 3
+
+[node name="enterAnim" type="AnimationPlayer" parent="botTutorials/botdireita"]
+anims/idle = SubResource( 21 )
+anims/pressionando = SubResource( 22 )
+
+[node name="bottab" type="Sprite" parent="botTutorials"]
+position = Vector2( 352, 342 )
+scale = Vector2( 2.57813, 2.46875 )
+texture = ExtResource( 17 )
+hframes = 4
+vframes = 8
+
+[node name="enterAnim" type="AnimationPlayer" parent="botTutorials/bottab"]
+anims/idle = SubResource( 19 )
+anims/pressionando = SubResource( 20 )
+
+[node name="botenter" type="Sprite" parent="botTutorials"]
+position = Vector2( 207, 342 )
+scale = Vector2( 2.3125, 2.3125 )
+texture = ExtResource( 17 )
+hframes = 4
+vframes = 8
+frame = 7
+
+[node name="enterAnim" type="AnimationPlayer" parent="botTutorials/botenter"]
+anims/idle = SubResource( 17 )
+anims/pressionando = SubResource( 18 )
+
+[node name="text_tutorial" type="Label" parent="botTutorials"]
+margin_left = 382.0
+margin_top = 319.0
+margin_right = 636.0
+margin_bottom = 352.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 25 )
+align = 1
+valign = 1
+autowrap = true
+
+[node name="dialogo" type="Control" parent="."]
+margin_left = -472.0
+margin_top = 132.0
+margin_right = -457.0
+margin_bottom = 147.0
+
+[node name="Dialog Box" type="ColorRect" parent="dialogo"]
+margin_left = 480.0
+margin_top = 31.0
+margin_right = 636.0
+margin_bottom = 180.0
+color = Color( 0.223529, 0.25098, 0.27451, 1 )
+script = ExtResource( 11 )
+dialogPath = "res://dialogos/dialog0.tres"
+
+[node name="Name" type="RichTextLabel" parent="dialogo/Dialog Box"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 88.0
+margin_bottom = 33.0
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+
+[node name="Text" type="RichTextLabel" parent="dialogo/Dialog Box"]
+margin_left = 8.0
+margin_top = 32.0
+margin_right = 140.0
+margin_bottom = 138.0
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+
+[node name="Indicator" type="Polygon2D" parent="dialogo/Dialog Box"]
+position = Vector2( 4, 5 )
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( 145, 133, 135, 133, 140, 140 )
+
+[node name="poligono" type="AnimationPlayer" parent="dialogo/Dialog Box/Indicator"]
+autoplay = "movendo"
+anims/movendo = SubResource( 26 )
+
+[node name="Timer" type="Timer" parent="dialogo/Dialog Box"]
+one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="dialogo/Dialog Box"]
+stream = ExtResource( 13 )
+
+[node name="paredeEMovelCenario1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 187.917, 203 )
+scale = Vector2( 1.79167, 1.79167 )
+texture = ExtResource( 4 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 12 )
+autoplay = true

@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/fase_1/fase_1_DialogBox.gd" type="Script" id=1]
+[ext_resource path="res://assets/characters/Eli.png" type="Texture" id=2]
+[ext_resource path="res://assets/Ui/fundo jogo 2.1.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "movendo"
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.45, 0.8, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 4, 5 ), Vector2( 4, 3 ), Vector2( 4, 5 ), Vector2( 4, 3 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 320, 183.375 )
+scale = Vector2( 0.624166, 0.612083 )
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 146, 92 )
+scale = Vector2( 12.6017, 12.3383 )
+texture = ExtResource( 2 )
+hframes = 16
+vframes = 4
+frame = 11
+
+[node name="dialogo_1" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Dialog1" type="ColorRect" parent="dialogo_1"]
+margin_left = 78.0
+margin_top = 186.0
+margin_right = 568.0
+margin_bottom = 337.0
+color = Color( 0.223529, 0.25098, 0.27451, 1 )
+script = ExtResource( 1 )
+dialogPath = "res://dialogos/dialog1.tres"
+
+[node name="Name" type="RichTextLabel" parent="dialogo_1/Dialog1"]
+margin_left = 4.0
+margin_top = 7.0
+margin_right = 111.0
+margin_bottom = 39.0
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+
+[node name="Text" type="RichTextLabel" parent="dialogo_1/Dialog1"]
+margin_left = 8.0
+margin_top = 34.0
+margin_right = 438.0
+margin_bottom = 138.0
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+
+[node name="Indicator" type="Polygon2D" parent="dialogo_1/Dialog1"]
+position = Vector2( 325, 0.999995 )
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( 145, 133, 135, 133, 140, 140 )
+
+[node name="poligono" type="AnimationPlayer" parent="dialogo_1/Dialog1/Indicator"]
+autoplay = "movendo"
+anims/movendo = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="dialogo_1/Dialog1"]
+one_shot = true
