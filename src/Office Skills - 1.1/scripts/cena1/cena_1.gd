@@ -1,25 +1,25 @@
 extends Node2D
 
 # Referência ao AnimationPlayer/ AnimationPlayer reference
-var animation_player = null 
+var animation_playerRafa = null 
 
 # ao clicar os botões aparecer o tutorial do mesmo e ativar animação na imagem. / Activate tutorial and animations when pressing movement keys.
 func _process(delta): 
 	if Input.is_action_just_pressed("pressed_enter"):
-		animation_player = get_node("botTutorials/botenter/enterAnim")
-		animation_player.play("pressionando")
+		animation_playerRafa = get_node("botTutorials/botenter/enterAnim")
+		animation_playerRafa.play("pressionando")
 		$botTutorials/text_tutorial.text = "Utilize este botão para confirmar e pular as falas"
 	if Input.is_action_just_pressed("move_right"):
-		animation_player = get_node("botTutorials/botdireita/enterAnim")
-		animation_player.play("pressionando")
+		animation_playerRafa = get_node("botTutorials/botdireita/enterAnim")
+		animation_playerRafa.play("pressionando")
 		$botTutorials/text_tutorial.text = "Utilize este botão para mover-se para direita."
 	if Input.is_action_just_pressed("move_left"):
-		animation_player = get_node("botTutorials/botesquerda/enterAnim")
-		animation_player.play("pressionando")
+		animation_playerRafa = get_node("botTutorials/botesquerda/enterAnim")
+		animation_playerRafa.play("pressionando")
 		$botTutorials/text_tutorial.text = "Utilize este botão para mover-se para esquerda."
 	if Input.is_action_just_pressed("press_tab"):
-		animation_player = get_node("botTutorials/bottab/enterAnim")
-		animation_player.play("pressionando")
+		animation_playerRafa = get_node("botTutorials/bottab/enterAnim")
+		animation_playerRafa.play("pressionando")
 		$botTutorials/text_tutorial.text = "Utilize este botão para abrir as configurações do jogo."
 		
 	

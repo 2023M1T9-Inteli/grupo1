@@ -6,26 +6,26 @@ export var dialogPath = ""
 export(float) var textSpeed = 0.05
 
 # Define as variáveis dialog, phraseNum e finished / Sets variables dialog, phraseNum and finished
-var dialog
-var phraseNum = 0
+var dialogCena1
+var phraseNumCena1 = 0
 
 # Texto encerrado / Text finished.
-var finished = false
+var finishedCena1 = false
 
 func _ready():
 	# Define o tempo de espera do timer com a velocidade do texto / Sets timer wait time with text speed.
 	$Timer.wait_time = textSpeed
 	# Obtém o diálogo / Obtains dialog
-	dialog = getDialog()
+	dialogCena1 = getDialog()
 	# Garante que a função getDialog funcionou / Ensures getDialog function worked
-	assert(dialog, "Dialogo nao achado")
+	assert(dialogCena1, "Dialogo nao achado")
 	# Inicia a próxima frase / Starts next phrase
 	nextPhrase()
 
 func _process(delta):
 	# Se o botão "Enter" for pressionado, vá para a próxima frase ou termine a atual / If "enter" key is pressed, go to next phrase on skip actual phrase.
 	if Input.is_action_just_pressed("ui_accept"):
-		if finished:
+		if finishedCena1:
 			nextPhrase()
 			$AudioStreamPlayer.play()
 		else:
@@ -52,16 +52,16 @@ func getDialog() -> Array:
 func nextPhrase() -> void:
 	Global.bloquear_movimentos()
 	# Se o número de frases for maior ou igual ao comprimento do diálogo, exclui a caixa de diálogo e retorna / If phrase number is greater or equal dialog lenght, removes dialog box and return.
-	if phraseNum >= len(dialog):
+	if phraseNumCena1 >= len(dialogCena1):
 		queue_free()
 		Global.desbloquear_movimentos()
 		Global.acionar_movimento_eli()
 		return
 	# Define a variável finished como falsa / Sets finished variable as false.
-	finished = false
+	finishedCena1 = false
 	# Define o texto do nome e do texto da caixa de diálogo / Sets text for "Name" and text for "Text" in dialog box.
-	$Name.bbcode_text = dialog[phraseNum]["Name"]
-	$Text.bbcode_text = dialog[phraseNum]["Text"]
+	$Name.bbcode_text = dialogCena1[phraseNumCena1]["Name"]
+	$Text.bbcode_text = dialogCena1[phraseNumCena1]["Text"]
 	# Define o número de caracteres visíveis como zero / Sets visible character as 0.
 	$Text.visible_characters = 0
 	# Enquanto o número de caracteres visíveis for menor do que o comprimento do texto, aumenta o número de caracteres visíveis em 1 / If character numer is equal or less than text lenght, increases visible characters in 1.
@@ -72,6 +72,6 @@ func nextPhrase() -> void:
 		# Pausa a função até que o "timeout" seja emitido / Pauses function until "timeout"
 		yield($Timer,"timeout")
 	# Define a variável finished como verdadeira, aumenta o número de frases em 1 e retorna / Sets finished as true and increases number of phrases.
-	finished= true
-	phraseNum += 1
+	finishedCena1= true
+	phraseNumCena1 += 1
 	return

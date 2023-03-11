@@ -788,7 +788,6 @@ margin_right = 633.0
 margin_bottom = 354.0
 color = Color( 0.223529, 0.25098, 0.27451, 1 )
 script = ExtResource( 15 )
-dialogPath = "res://dialogos/dialog2.tres"
 
 [node name="Name" type="RichTextLabel" parent="dialogo_2/Dialog2"]
 margin_left = 4.0
@@ -805,7 +804,7 @@ margin_bottom = 138.0
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 
 [node name="Indicator" type="Polygon2D" parent="dialogo_2/Dialog2"]
-position = Vector2( 5, -3.99999 )
+position = Vector2( 4, 5 )
 color = Color( 0, 0, 0, 1 )
 polygon = PoolVector2Array( 145, 133, 135, 133, 140, 140 )
 

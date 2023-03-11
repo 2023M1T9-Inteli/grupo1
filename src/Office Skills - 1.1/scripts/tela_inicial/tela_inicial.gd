@@ -1,7 +1,7 @@
 extends Node2D
 
 # Referência ao AnimationPlayer / AnimationPlayer Reference
-var animation_player = null
+var animation_playerRafa = null
 
 func _ready(): 
 	#iniciar sem rodar a função _process para rafa ficar parada. / Inicialize without running _process function so Rafa stays idle
@@ -17,15 +17,15 @@ func _on_botao_enter_pressed():
 # loop para movimentação da rafa / Rafa movement loop
 func _process(delta):
 	#movimentar Rafa / Move Rafa
-	var speed = -140
-	$RafaProtagonista.position.x += speed * delta
+	var speedRafa = -140
+	$RafaProtagonista.position.x += speedRafa * delta
 
 	if position.x != 1:
 		$RafaProtagonista/AnimationPlayer.play("andarembora")
 		
 		#parar assim que sair da tela / Stops as soon ascharacter leaves the screen
 	if  position.x < 0:
-		speed = 0
+		speedRafa = 0
 
 # trocar de tela ao clicar "enter" no teclado / Change screen when  "enter" is pressed"
 func _input(event):

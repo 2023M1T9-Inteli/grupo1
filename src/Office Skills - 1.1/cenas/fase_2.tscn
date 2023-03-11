@@ -470,18 +470,18 @@ shape = SubResource( 32 )
 
 [node name="Personagens" type="Node2D" parent="."]
 
-[node name="fase2_rafa_protagonista" type="KinematicBody2D" parent="Personagens"]
+[node name="fase1_rafa_protagonista" type="KinematicBody2D" parent="Personagens"]
 position = Vector2( 23, 171 )
 script = ExtResource( 11 )
 
-[node name="sprite" type="Sprite" parent="Personagens/fase2_rafa_protagonista"]
+[node name="sprite" type="Sprite" parent="Personagens/fase1_rafa_protagonista"]
 position = Vector2( 5.002, -5.002 )
 scale = Vector2( 2.24983, 2.24983 )
 texture = ExtResource( 3 )
 hframes = 16
 vframes = 4
 
-[node name="anim" type="AnimationPlayer" parent="Personagens/fase2_rafa_protagonista"]
+[node name="anim" type="AnimationPlayer" parent="Personagens/fase1_rafa_protagonista"]
 anims/andandobaixo = SubResource( 23 )
 anims/andandocima = SubResource( 24 )
 anims/andandoladod = SubResource( 25 )
@@ -490,7 +490,7 @@ anims/idle = SubResource( 27 )
 anims/idlecima = SubResource( 28 )
 anims/parada = SubResource( 29 )
 
-[node name="collision" type="CollisionShape2D" parent="Personagens/fase2_rafa_protagonista"]
+[node name="collision" type="CollisionShape2D" parent="Personagens/fase1_rafa_protagonista"]
 position = Vector2( 5, 1 )
 shape = SubResource( 30 )
 

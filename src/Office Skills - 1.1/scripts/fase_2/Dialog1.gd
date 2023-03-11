@@ -6,23 +6,23 @@ export var dialogPath = ""
 # Define a velocidade do texto que será usada / Sets text speed.
 export(float) var textSpeed = 0.05
 
-var dialog
-var phraseNum = 0
+var dialogFase2
+var phraseNumFase2 = 0
 
 # Texto encerrado / Text finished.
-var finished = false
+var finishedFase2 = false
 
 func _ready():
 	
-	finished = true
+	finishedFase2 = true
 	# Define o tempo de espera do timer com a velocidade do texto / Sets timer wait time with text speed.
 	$Timer.wait_time = textSpeed
 	
 	# Obtém o diálogo / Obtains dialog
-	dialog = getDialog()
+	dialogFase2 = getDialog()
 	
 	# Garante que a função getDialog funcionou / Ensures getDialog function worked
-	assert(dialog, "Diálogo não encontrado")
+	assert(dialogFase2, "Diálogo não encontrado")
 	
 	# Inicia a próxima frase / Starts next phrase
 	nextPhrase()
@@ -30,7 +30,7 @@ func _ready():
 func _process(delta):
 	# Verificando se o jogador pressionou a tecla "enter" / Check if wnter key is pressed.
 	if Input.is_action_just_pressed("ui_accept") :
-		if finished:
+		if finishedFase2:
 			# Exibindo a próxima frase /  Display the next sentence
 			nextPhrase()
 			$AudioStreamPlayer.play()
@@ -61,15 +61,15 @@ func getDialog() -> Array:
 		
 func nextPhrase() -> void:
 	# Verificando se todas as frases do diálogo foram exibidas / Checks if all dialog phrases were displayed.
-	if phraseNum >= len(dialog):
+	if phraseNumFase2 >= len(dialogFase2):
 		queue_free()
 		Global.desbloquear_movimentos()
 		Global.show_dialog3 = false
 		return
 	
-	finished = false
-	$Name.bbcode_text = dialog[phraseNum]["Name"]
-	$Text.bbcode_text = dialog[phraseNum]["Text"]
+	finishedFase2 = false
+	$Name.bbcode_text = dialogFase2[phraseNumFase2]["Name"]
+	$Text.bbcode_text = dialogFase2[phraseNumFase2]["Text"]
 	
 	$Text.visible_characters = 0
 	
@@ -80,6 +80,6 @@ func nextPhrase() -> void:
 		$Timer.start()
 		yield($Timer,"timeout")
 	
-	finished = true
-	phraseNum += 1
+	finishedFase2 = true
+	phraseNumFase2 += 1
 	return
