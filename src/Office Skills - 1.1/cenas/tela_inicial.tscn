@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://scripts/tela_inicial/tela_inicial.gd" type="Script" id=1]
 [ext_resource path="res://assets/Ui/inicio_novo.png" type="Texture" id=2]
@@ -6,8 +6,39 @@
 [ext_resource path="res://assets/buttons/enter.png" type="Texture" id=4]
 [ext_resource path="res://assets/characters/rafaProtagonista.png" type="Texture" id=5]
 [ext_resource path="res://players/tela_inicial/RafaProtagonista.gd" type="Script" id=6]
-[ext_resource path="res://assets/aúdios/music_1_menu.mp3" type="AudioStream" id=7]
+[ext_resource path="res://assets/aúdios/Music_Game_-_5.mp3" type="AudioStream" id=7]
 [ext_resource path="res://assets/aúdios/botão tela inicial.wav" type="AudioStream" id=8]
+[ext_resource path="res://assets/Ui/back_transparent.png" type="Texture" id=9]
+[ext_resource path="res://assets/buttons/sobrenosbot.png" type="Texture" id=10]
+[ext_resource path="res://assets/buttons/sobrennosbotp.png" type="Texture" id=11]
+[ext_resource path="res://assets/buttons/controlesbot.png" type="Texture" id=12]
+[ext_resource path="res://assets/buttons/controlesbotp.png" type="Texture" id=13]
+[ext_resource path="res://assets/buttons/sairbot.png" type="Texture" id=14]
+[ext_resource path="res://assets/buttons/sairbotp.png" type="Texture" id=15]
+[ext_resource path="res://assets/buttons/fasesbotp.png" type="Texture" id=16]
+[ext_resource path="res://assets/buttons/fasesbot.png" type="Texture" id=17]
+[ext_resource path="res://assets/Ui/telaconteudos2.png" type="Texture" id=18]
+[ext_resource path="res://assets/buttons/fase1bot.png" type="Texture" id=19]
+[ext_resource path="res://assets/mapas/fase1.png" type="Texture" id=20]
+[ext_resource path="res://assets/mapas/tutorial.png" type="Texture" id=21]
+[ext_resource path="res://assets/buttons/fase2bot.png" type="Texture" id=22]
+[ext_resource path="res://assets/buttons/fase2botp.png" type="Texture" id=23]
+[ext_resource path="res://assets/mapas/fase2.png" type="Texture" id=24]
+[ext_resource path="res://assets/buttons/fase1botp.png" type="Texture" id=25]
+[ext_resource path="res://assets/buttons/fase3botp.png" type="Texture" id=26]
+[ext_resource path="res://assets/buttons/fase4botp.png" type="Texture" id=27]
+[ext_resource path="res://assets/buttons/fase5bot.png" type="Texture" id=28]
+[ext_resource path="res://assets/buttons/fase5botp.png" type="Texture" id=29]
+[ext_resource path="res://assets/buttons/fase3bot.png" type="Texture" id=30]
+[ext_resource path="res://assets/buttons/fase4bot.png" type="Texture" id=31]
+[ext_resource path="res://assets/buttons/fasesletras.png" type="Texture" id=32]
+[ext_resource path="res://assets/mapas/fase3ft.png" type="Texture" id=33]
+[ext_resource path="res://assets/mapas/fase4ft.png" type="Texture" id=34]
+[ext_resource path="res://assets/Ui/tela_controles.png" type="Texture" id=35]
+[ext_resource path="res://assets/fontes/Stacked pixel.ttf" type="DynamicFontData" id=36]
+[ext_resource path="res://assets/Ui/notastela.png" type="Texture" id=37]
+[ext_resource path="res://assets/aúdios/botões no pause.wav" type="AudioStream" id=38]
+[ext_resource path="res://assets/Ui/fase5tela.png" type="Texture" id=39]
 
 [sub_resource type="Animation" id=4]
 resource_name = "Idle"
@@ -58,25 +89,85 @@ tracks/0/keys = {
 "values": [ 1, 17, 1, 33, 1 ]
 }
 
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 36 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 36 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 36 )
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 36 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 27
+font_data = ExtResource( 36 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 22
+font_data = ExtResource( 36 )
+
 [node name="tela_inicial" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="fundo" type="Sprite" parent="."]
-position = Vector2( 321.419, 183.5 )
-scale = Vector2( 0.631678, 0.608333 )
+position = Vector2( 321.419, 186.5 )
+scale = Vector2( 0.631678, 0.618333 )
 texture = ExtResource( 2 )
 
 [node name="botao_enter" type="TextureButton" parent="."]
-margin_left = 452.0
-margin_top = 266.0
-margin_right = 634.0
-margin_bottom = 340.0
+margin_left = 454.0
+margin_top = 282.0
+margin_right = 636.0
+margin_bottom = 356.0
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 3 )
 expand = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.5
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -20.0
+
+[node name="exemplo_button_sobre" type="Sprite" parent="."]
+visible = false
+position = Vector2( 322, 179.5 )
+scale = Vector2( 1.01563, 1.02473 )
+texture = ExtResource( 9 )
+
+[node name="btn_fases" type="TextureButton" parent="."]
+visible = false
+margin_left = 2.0
+margin_top = 260.0
+margin_right = 71.0
+margin_bottom = 291.0
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 16 )
+expand = true
+
+[node name="botsobre" type="TextureButton" parent="."]
+margin_left = 1.0
+margin_top = 293.0
+margin_right = 118.0
+margin_bottom = 333.0
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+
+[node name="botcontroles" type="TextureButton" parent="."]
+margin_left = 1.0
+margin_top = 326.0
+margin_right = 118.0
+margin_bottom = 366.0
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
 
 [node name="RafaProtagonista" type="Sprite" parent="."]
 position = Vector2( 317, 215 )
@@ -92,12 +183,243 @@ anims/Idle = SubResource( 4 )
 anims/andarembora = SubResource( 2 )
 anims/olharlados = SubResource( 1 )
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 7 )
-autoplay = true
+[node name="fasestela" type="Sprite" parent="."]
+visible = false
+position = Vector2( 315, 183 )
+scale = Vector2( 1.02656, 1.03297 )
+texture = ExtResource( 18 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 8 )
+[node name="tutorial" type="Sprite" parent="fasestela"]
+position = Vector2( -178.265, -15.4895 )
+scale = Vector2( 0.0601542, 0.0601542 )
+texture = ExtResource( 21 )
+
+[node name="tutorial_bot" type="TextureButton" parent="fasestela/tutorial"]
+anchor_left = 0.485
+anchor_top = 0.566
+anchor_right = 0.485
+anchor_bottom = 0.566
+margin_left = -1209.46
+margin_top = -59.408
+margin_right = -416.456
+margin_bottom = 342.592
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 16 )
+expand = true
+
+[node name="fase1" type="Sprite" parent="fasestela"]
+position = Vector2( -66.2402, -13.5532 )
+scale = Vector2( 0.0588908, 0.0595907 )
+texture = ExtResource( 20 )
+
+[node name="fase1_bot" type="TextureButton" parent="fasestela/fase1"]
+anchor_left = 0.449
+anchor_top = 0.5
+anchor_right = 0.449
+anchor_bottom = 0.5
+margin_left = -1221.79
+margin_top = 16.5
+margin_right = -397.789
+margin_bottom = 413.5
+texture_normal = ExtResource( 19 )
+texture_pressed = ExtResource( 25 )
+expand = true
+
+[node name="fase2" type="Sprite" parent="fasestela"]
+position = Vector2( 52.603, -12.5852 )
+scale = Vector2( 0.0620784, 0.0621681 )
+texture = ExtResource( 24 )
+
+[node name="fase2_bot" type="TextureButton" parent="fasestela/fase2"]
+anchor_left = 0.449
+anchor_top = 0.5
+anchor_right = 0.449
+anchor_bottom = 0.5
+margin_left = -1199.78
+margin_top = 9.39551
+margin_right = -417.783
+margin_bottom = 376.396
+texture_normal = ExtResource( 22 )
+texture_pressed = ExtResource( 23 )
+expand = true
+
+[node name="fase3" type="Sprite" parent="fasestela"]
+position = Vector2( 173.394, -10.6489 )
+scale = Vector2( 0.105, 0.122945 )
+texture = ExtResource( 33 )
+
+[node name="fase3_bot" type="TextureButton" parent="fasestela/fase3"]
+anchor_left = 0.449
+anchor_top = 0.5
+anchor_right = 0.449
+anchor_bottom = 0.5
+margin_left = -721.755
+margin_top = -12.5
+margin_right = -236.755
+margin_bottom = 188.5
+texture_normal = ExtResource( 30 )
+texture_pressed = ExtResource( 26 )
+expand = true
+
+[node name="fase4" type="Sprite" parent="fasestela"]
+position = Vector2( -70.2645, 88.1741 )
+scale = Vector2( 0.112021, 0.113773 )
+texture = ExtResource( 34 )
+
+[node name="fase4_bot" type="TextureButton" parent="fasestela/fase4"]
+anchor_left = 0.449
+anchor_top = 0.5
+anchor_right = 0.449
+anchor_bottom = 0.5
+margin_left = -662.612
+margin_top = -1.5
+margin_right = -227.612
+margin_bottom = 202.5
+texture_normal = ExtResource( 31 )
+texture_pressed = ExtResource( 27 )
+expand = true
+
+[node name="fase5" type="Sprite" parent="fasestela"]
+position = Vector2( 59.3716, 87.1753 )
+scale = Vector2( 0.0486866, 0.0491129 )
+texture = ExtResource( 39 )
+
+[node name="fase5_bot" type="TextureButton" parent="fasestela/fase5"]
+anchor_left = 0.449
+anchor_top = 0.5
+anchor_right = 0.449
+anchor_bottom = 0.5
+margin_left = -1465.03
+margin_top = 38.5
+margin_right = -455.027
+margin_bottom = 512.5
+texture_normal = ExtResource( 28 )
+texture_pressed = ExtResource( 29 )
+expand = true
+
+[node name="fasesletras" type="Sprite" parent="fasestela"]
+position = Vector2( -148.067, -125.851 )
+scale = Vector2( 5.74172, 5.34043 )
+texture = ExtResource( 32 )
+
+[node name="sairfases" type="TextureButton" parent="fasestela"]
+margin_left = 187.0
+margin_top = -141.0
+margin_right = 282.0
+margin_bottom = -111.0
+
+[node name="controlestela" type="Sprite" parent="."]
+visible = false
+position = Vector2( 308, 174 )
+texture = ExtResource( 35 )
+
+[node name="Label" type="Label" parent="controlestela"]
+margin_left = -160.0
+margin_top = -41.0
+margin_right = -1.0
+margin_bottom = 44.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Utlize estes bots para movimentar a personagem"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label2" type="Label" parent="controlestela"]
+margin_left = 93.0
+margin_top = -99.0
+margin_right = 302.0
+margin_bottom = -77.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Acionar tela de pause"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label3" type="Label" parent="controlestela"]
+margin_left = 94.0
+margin_top = -8.0
+margin_right = 311.0
+margin_bottom = 15.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Pular falas e confirmar bots "
+align = 1
+valign = 1
+
+[node name="Label4" type="Label" parent="controlestela"]
+margin_left = 93.0
+margin_top = 77.0
+margin_right = 301.0
+margin_bottom = 102.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Pular falas"
+align = 1
+valign = 1
+
+[node name="sobrenos" type="Sprite" parent="."]
+visible = false
+position = Vector2( 336, 185 )
+scale = Vector2( 1.07418, 1.07418 )
+texture = ExtResource( 37 )
+
+[node name="Label2" type="Label" parent="sobrenos"]
+margin_left = -139.642
+margin_top = -83.7852
+margin_right = 98.358
+margin_bottom = 174.215
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Beatriz Monsanto
+Guilherme Linhares
+Lidia Mariano 
+Lucas Bittencourt 
+Luiz Saad
+Nicollas Isaac
+Michel Khafif 
+Pedro Lima
+
+"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="sobrenos"]
+margin_left = -219.703
+margin_top = -130.332
+margin_right = 178.297
+margin_bottom = -70.3325
+custom_colors/font_color = Color( 0.745098, 0.168627, 0.168627, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Grupo 1 - Turma 9 2023 Criadores:"
+align = 1
+valign = 1
+
+[node name="botsair" type="TextureButton" parent="."]
+visible = false
+margin_left = 1.0
+margin_top = 5.0
+margin_right = 74.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 15 )
+expand = true
+
+[node name="botsaudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 38 )
+autoplay = true
 
 [connection signal="pressed" from="botao_enter" to="." method="_on_botao_enter_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="btn_fases" to="." method="_on_btn_fases_pressed"]
+[connection signal="pressed" from="botsobre" to="." method="_on_botsobre_pressed"]
+[connection signal="pressed" from="botcontroles" to="." method="_on_botcontroles_pressed"]
+[connection signal="pressed" from="fasestela/tutorial/tutorial_bot" to="." method="_on_tutorial_bot_pressed"]
+[connection signal="pressed" from="fasestela/fase1/fase1_bot" to="." method="_on_fase1_bot_pressed"]
+[connection signal="pressed" from="fasestela/fase2/fase2_bot" to="." method="_on_fase2_bot_pressed"]
+[connection signal="pressed" from="fasestela/fase3/fase3_bot" to="." method="_on_fase3_bot_pressed"]
+[connection signal="pressed" from="fasestela/fase4/fase4_bot" to="." method="_on_fase4_bot_pressed"]
+[connection signal="pressed" from="fasestela/fase5/fase5_bot" to="." method="_on_fase5_bot_pressed"]
+[connection signal="pressed" from="fasestela/sairfases" to="." method="_on_sairfases_pressed"]
+[connection signal="pressed" from="botsair" to="." method="_on_botsair_pressed"]

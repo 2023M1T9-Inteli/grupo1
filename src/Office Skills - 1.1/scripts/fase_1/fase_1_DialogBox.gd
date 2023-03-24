@@ -27,13 +27,15 @@ func _ready():
 	
 func _process(delta):
 	# Verificando se o jogador pressionou a tecla "enter" / Check if wnter key is pressed.
-	if Input.is_action_just_pressed("ui_accept") :
-		if finished:
-			# Exibindo a próxima frase /  Display the next sentence
-			nextPhrase()
-			$AudioStreamPlayer.play()
-		else:
-			$Text.visible_characters = len($Text.text) # Se o texto ainda não terminou, o jogador pode pular para o fim do diálogo pressionando "enter"
+	if Global.final_dialogo == false:
+		if Input.is_action_just_pressed("ui_accept") :
+			if finished:
+				# Exibindo a próxima frase /  Display the next sentence
+				nextPhrase()
+				$AudioStreamPlayer.play()
+			# Se o texto ainda não terminou, o jogador pode pular para o fim do diálogo pressionando "enter"
+			else:
+				$Text.visible_characters = len($Text.text)
 	
 	
 func getDialog() -> Array:
@@ -60,6 +62,7 @@ func getDialog() -> Array:
 func nextPhrase() -> void:
 	# Verificando se todas as frases do diálogo foram exibidas / Checks if all dialog phrases were displayed.
 	if phraseNum >= len(dialog):
+		Global.icone_mesa = true
 		Global.desbloquear_movimentos()
 		Global.final_dialogo1()
 		queue_free()

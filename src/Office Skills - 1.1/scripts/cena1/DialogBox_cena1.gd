@@ -51,19 +51,24 @@ func getDialog() -> Array:
 
 func nextPhrase() -> void:
 	Global.bloquear_movimentos()
+	
 	# Se o número de frases for maior ou igual ao comprimento do diálogo, exclui a caixa de diálogo e retorna / If phrase number is greater or equal dialog lenght, removes dialog box and return.
 	if phraseNumCena1 >= len(dialogCena1):
 		queue_free()
 		Global.desbloquear_movimentos()
 		Global.acionar_movimento_eli()
 		return
+	
 	# Define a variável finished como falsa / Sets finished variable as false.
 	finishedCena1 = false
+	
 	# Define o texto do nome e do texto da caixa de diálogo / Sets text for "Name" and text for "Text" in dialog box.
 	$Name.bbcode_text = dialogCena1[phraseNumCena1]["Name"]
 	$Text.bbcode_text = dialogCena1[phraseNumCena1]["Text"]
+	
 	# Define o número de caracteres visíveis como zero / Sets visible character as 0.
 	$Text.visible_characters = 0
+	
 	# Enquanto o número de caracteres visíveis for menor do que o comprimento do texto, aumenta o número de caracteres visíveis em 1 / If character numer is equal or less than text lenght, increases visible characters in 1.
 	while $Text.visible_characters < len($Text.text):
 		$Text.visible_characters += 1
@@ -71,6 +76,7 @@ func nextPhrase() -> void:
 		$Timer.start()
 		# Pausa a função até que o "timeout" seja emitido / Pauses function until "timeout"
 		yield($Timer,"timeout")
+		
 	# Define a variável finished como verdadeira, aumenta o número de frases em 1 e retorna / Sets finished as true and increases number of phrases.
 	finishedCena1= true
 	phraseNumCena1 += 1

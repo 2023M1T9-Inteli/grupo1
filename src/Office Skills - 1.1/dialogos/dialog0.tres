@@ -1,12 +1,5 @@
 [
-    {"Name": "Eli", "Text": "Ei, Rafa! Hoje é o seu primeiro dia aqui na Office Skills, certo?"},
-    {"Name":"Eli","Text": "Sou Eli, lider do departamento de recursos humanos aqui da empresa."},
-    {"Name":"Eli","Text": "Antes de começarmos a trabalhar, preciso passar algumas instruções básicas."},
-    {"Name":"Eli","Text": "é tipo um tutorial de jogo, só que aqui é a vida real!"},
-    {"Name":"Eli","Text": "Use as setas ou as teclas A, S, D e W para se movimentar pelo escritório, mas cuidado pra não bater em ninguém!"},
-    {"Name":"Eli","Text": "E se quiser pular mensagem (e quem não quer, né?)"},
-    {"Name":"Eli","Text":"é só apertar a barra de espaço. Vai ser bem útil se precisar pular alguma mensagem no caminho."},
-    {"Name":"Eli","Text": "Lembra daqueles jogos onde você tem um ajudante? Então, eu serei a sua ajudante aqui na empresa!"},
-    {"Name":"Eli","Text": "Qualquer dúvida, é só me chamar que eu estarei pronta pra ajudar."},
-    {"Name":"Eli","Text": "E aí, pronta para começar a aventura? Vamos lá! Me acompanhe!!"},
+    {"Name": "Eli", "Text": "Ei, Rafa! Parabéns pela admissão na empresa!"},
+    {"Name": "Eli", "Text": "Sou Eli, líder do departamento de RH. Serei sua ajudante aqui."},
+    {"Name":"Eli","Text": "Pronta para começar? Me acompanhe!"}
 ]

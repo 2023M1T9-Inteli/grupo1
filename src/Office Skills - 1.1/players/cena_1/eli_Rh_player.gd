@@ -11,7 +11,7 @@ var stepEli = 1
 var velocityEli = Vector2() 
 
 # Velocidade de movimento do NPC / NPC movement speed.
-var speedEli = 50
+var speedEli = 80
 
 # Referência ao AnimationPlayer / AnimationPlayer reference 
 var animation_playerEli = null 
@@ -34,8 +34,6 @@ func _physics_process(delta):
 	# Calcular a direção do movimento / Calculate movement direction
 	var direction = Vector2()
 	
-	print(position.x)
-	print(position.y)
 	# Etapas de animação/ Animation steps
 	if stepEli == 1:
 		direction = Vector2(target_positionEli.x - position.x, 0)

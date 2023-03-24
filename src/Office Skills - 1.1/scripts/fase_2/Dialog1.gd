@@ -6,23 +6,23 @@ export var dialogPath = ""
 # Define a velocidade do texto que será usada / Sets text speed.
 export(float) var textSpeed = 0.05
 
-var dialogFase2
-var phraseNumFase2 = 0
+var dialogFase4
+var phraseNumFase4 = 0
 
 # Texto encerrado / Text finished.
-var finishedFase2 = false
+var finishedFase4 = false
 
 func _ready():
 	
-	finishedFase2 = true
+	finishedFase4 = true
 	# Define o tempo de espera do timer com a velocidade do texto / Sets timer wait time with text speed.
 	$Timer.wait_time = textSpeed
 	
 	# Obtém o diálogo / Obtains dialog
-	dialogFase2 = getDialog()
+	dialogFase4 = getDialog()
 	
 	# Garante que a função getDialog funcionou / Ensures getDialog function worked
-	assert(dialogFase2, "Diálogo não encontrado")
+	assert(dialogFase4, "Diálogo não encontrado")
 	
 	# Inicia a próxima frase / Starts next phrase
 	nextPhrase()
@@ -30,7 +30,7 @@ func _ready():
 func _process(delta):
 	# Verificando se o jogador pressionou a tecla "enter" / Check if wnter key is pressed.
 	if Input.is_action_just_pressed("ui_accept") :
-		if finishedFase2:
+		if finishedFase4:
 			# Exibindo a próxima frase /  Display the next sentence
 			nextPhrase()
 			$AudioStreamPlayer.play()
@@ -61,25 +61,25 @@ func getDialog() -> Array:
 		
 func nextPhrase() -> void:
 	# Verificando se todas as frases do diálogo foram exibidas / Checks if all dialog phrases were displayed.
-	if phraseNumFase2 >= len(dialogFase2):
+	if phraseNumFase4 >= len(dialogFase4):
+		Global.final_dialogo1_fase3 = true
 		queue_free()
 		Global.desbloquear_movimentos()
-		Global.show_dialog3 = false
 		return
 	
-	finishedFase2 = false
-	$Name.bbcode_text = dialogFase2[phraseNumFase2]["Name"]
-	$Text.bbcode_text = dialogFase2[phraseNumFase2]["Text"]
+	finishedFase4 = false
+	$Name.bbcode_text = dialogFase4[phraseNumFase4]["Name"]
+	$Text.bbcode_text = dialogFase4[phraseNumFase4]["Text"]
 	
 	$Text.visible_characters = 0
 	
 	# Exibindo a frase letra por letra com um tempo de espera / Displays phrase letter by letter with a wait time.
 	while $Text.visible_characters < len($Text.text):
 		$Text.visible_characters += 1
-		
+
 		$Timer.start()
 		yield($Timer,"timeout")
 	
-	finishedFase2 = true
-	phraseNumFase2 += 1
+	finishedFase4 = true
+	phraseNumFase4 += 1
 	return

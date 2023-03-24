@@ -1,6 +1,7 @@
-[gd_scene load_steps=75 format=2]
+[gd_scene load_steps=83 format=2]
 
 [ext_resource path="res://assets/6_Office_Designs/cenario_cena_2_1.png" type="Texture" id=1]
+[ext_resource path="res://assets/Ui/chat_decision.png" type="Texture" id=2]
 [ext_resource path="res://assets/characters/rafaProtagonista.png" type="Texture" id=3]
 [ext_resource path="res://assets/buttons/Keyboard Letters and Symbols.png" type="Texture" id=4]
 [ext_resource path="res://scripts/botTutoriais.gd" type="Script" id=5]
@@ -11,6 +12,7 @@
 [ext_resource path="res://scripts/fase_1/fase_1.gd" type="Script" id=10]
 [ext_resource path="res://players/fase_1/fase_1_PlayerProtagonista.gd" type="Script" id=11]
 [ext_resource path="res://assets/6_Office_Designs/cenario_fase1_objects.png" type="Texture" id=12]
+[ext_resource path="res://assets/buttons/fase2botp.png" type="Texture" id=13]
 [ext_resource path="res://assets/3_Modern_Office_Shadowless/4_Modern_Office_singles/48x48/Modern_Office_Singles_48x48_155.png" type="Texture" id=14]
 [ext_resource path="res://scripts/fase_1/fase_1_dialog2.gd" type="Script" id=15]
 [ext_resource path="res://assets/Ui/background_transparent.jpg" type="Texture" id=16]
@@ -18,16 +20,21 @@
 [ext_resource path="res://players/fase_1/fase_1_thomas.gd" type="Script" id=18]
 [ext_resource path="res://assets/Ui/fundo alto direita vermelho.jpeg" type="Texture" id=19]
 [ext_resource path="res://scripts/fase_1/fase_1_dialog3.gd" type="Script" id=20]
-[ext_resource path="res://assets/Ui/decision1.png" type="Texture" id=21]
-[ext_resource path="res://assets/Ui/acertou_conteúdo.png" type="Texture" id=22]
+[ext_resource path="res://assets/buttons/fase2bot.png" type="Texture" id=21]
+[ext_resource path="res://assets/aúdios/Music_Game_-_5.mp3" type="AudioStream" id=22]
 [ext_resource path="res://assets/Ui/back_transparent.png" type="Texture" id=23]
 [ext_resource path="res://assets/Ui/errou_conteúdo.png" type="Texture" id=24]
-[ext_resource path="res://assets/aúdios/music_below.mp3" type="AudioStream" id=25]
+[ext_resource path="res://assets/fontes/Stacked pixel.ttf" type="DynamicFontData" id=25]
 [ext_resource path="res://assets/aúdios/botões no pause.wav" type="AudioStream" id=26]
-[ext_resource path="res://assets/Ui/botão_pressionado.tres" type="StyleBox" id=27]
-[ext_resource path="res://assets/Ui/botão_default.tres" type="StyleBox" id=28]
-[ext_resource path="res://assets/Ui/botão_selecionado.tres" type="StyleBox" id=29]
-[ext_resource path="res://assets/Ui/botão_focus.tres" type="StyleBox" id=30]
+[ext_resource path="res://assets/buttons/iniciartrabbot.png" type="Texture" id=27]
+[ext_resource path="res://assets/buttons/iniciartrabbotp.png" type="Texture" id=28]
+[ext_resource path="res://assets/Ui/setacadeira.png" type="Texture" id=29]
+[ext_resource path="res://assets/Ui/telaconteudoserro.png" type="Texture" id=30]
+[ext_resource path="res://assets/buttons/voltarfasebot.png" type="Texture" id=31]
+[ext_resource path="res://assets/buttons/voltarfasebotp.png" type="Texture" id=32]
+[ext_resource path="res://assets/buttons/voltardecisbot.png" type="Texture" id=33]
+[ext_resource path="res://assets/buttons/voltardecisbotp.png" type="Texture" id=34]
+[ext_resource path="res://assets/Ui/telaconteudosacerto.png" type="Texture" id=35]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15.125, 49 )
@@ -66,6 +73,22 @@ extents = Vector2( 4.00014, 16 )
 extents = Vector2( 12.1248, 2.5 )
 
 [sub_resource type="RectangleShape2D" id=32]
+
+[sub_resource type="Animation" id=48]
+resource_name = "cimabaixo"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 404, 282 ), Vector2( 404, 276 ) ]
+}
 
 [sub_resource type="Animation" id=15]
 resource_name = "andandobaixo"
@@ -389,8 +412,8 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=40]
 resource_name = "parada"
 
-[sub_resource type="DynamicFont" id=13]
-font_data = ExtResource( 6 )
+[sub_resource type="DynamicFont" id=50]
+font_data = ExtResource( 25 )
 
 [sub_resource type="Animation" id=9]
 resource_name = "idleCima"
@@ -507,8 +530,9 @@ tracks/0/keys = {
 "values": [ Vector2( 4, 5 ), Vector2( 4, 3 ), Vector2( 4, 5 ), Vector2( 4, 3 ) ]
 }
 
-[sub_resource type="DynamicFont" id=46]
-size = 20
+[sub_resource type="DynamicFont" id=49]
+size = 18
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=47]
@@ -595,24 +619,31 @@ shape = SubResource( 42 )
 position = Vector2( 372.125, 104 )
 shape = SubResource( 43 )
 
-[node name="icone_mesa" type="Polygon2D" parent="cenario"]
+[node name="icone_mesa" type="Sprite" parent="cenario"]
 visible = false
-position = Vector2( 254.5, 119.881 )
-scale = Vector2( 1.07143, 1.12593 )
-color = Color( 1, 0, 0, 1 )
-polygon = PoolVector2Array( 147.933, 128, 139.973, 133, 133, 128, 140.467, 144.875 )
+position = Vector2( 404, 276.062 )
+rotation = 1.5708
+scale = Vector2( 0.162022, 0.165269 )
+texture = ExtResource( 29 )
 
 [node name="Area2D" type="Area2D" parent="cenario/icone_mesa"]
+position = Vector2( -994.428, 904.587 )
+rotation = -1.5708
+scale = Vector2( 6.48295, 6.94925 )
 monitoring = false
 
 [node name="collision" type="CollisionShape2D" parent="cenario/icone_mesa/Area2D"]
-position = Vector2( 140, 136 )
+position = Vector2( 139.533, 139.491 )
 shape = SubResource( 32 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="cenario/icone_mesa"]
+autoplay = "cimabaixo"
+anims/cimabaixo = SubResource( 48 )
 
 [node name="Personagens" type="Node2D" parent="."]
 
 [node name="eli_Rh_player" type="KinematicBody2D" parent="Personagens"]
-position = Vector2( 4, 194 )
+position = Vector2( 2, 184 )
 script = ExtResource( 8 )
 
 [node name="anim" type="AnimationPlayer" parent="Personagens/eli_Rh_player"]
@@ -690,9 +721,8 @@ margin_top = 207.0
 margin_right = 629.0
 margin_bottom = 353.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 13 )
-text = "Vá até a Eli."
+custom_fonts/font = SubResource( 50 )
+text = "Caminhe para Eli."
 
 [node name="botTutoriais" type="Control" parent="."]
 margin_right = 40.0
@@ -728,8 +758,6 @@ margin_top = 6.0
 margin_right = 430.0
 margin_bottom = 46.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 13 )
 align = 1
 valign = 1
 
@@ -788,6 +816,7 @@ margin_right = 633.0
 margin_bottom = 354.0
 color = Color( 0.223529, 0.25098, 0.27451, 1 )
 script = ExtResource( 15 )
+dialogPath = "res://dialogos/dialog2.tres"
 
 [node name="Name" type="RichTextLabel" parent="dialogo_2/Dialog2"]
 margin_left = 4.0
@@ -907,17 +936,14 @@ texture = ExtResource( 16 )
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="button_quiz" type="Button" parent="quest_work/quiz"]
-margin_left = 227.0
-margin_top = 152.0
-margin_right = 414.0
-margin_bottom = 224.0
-custom_fonts/font = SubResource( 46 )
-custom_styles/hover = ExtResource( 29 )
-custom_styles/pressed = ExtResource( 27 )
-custom_styles/focus = ExtResource( 30 )
-custom_styles/normal = ExtResource( 28 )
-text = "Começar o trabalho"
+[node name="button_quiz" type="TextureButton" parent="quest_work/quiz"]
+margin_left = 230.0
+margin_top = 138.0
+margin_right = 408.0
+margin_bottom = 237.0
+texture_normal = ExtResource( 27 )
+texture_pressed = ExtResource( 28 )
+expand = true
 
 [node name="quest_decision" type="Control" parent="."]
 visible = false
@@ -925,44 +951,103 @@ margin_right = 640.0
 margin_bottom = 360.0
 
 [node name="blush" type="TextureRect" parent="quest_decision"]
-margin_left = -1.0
-margin_top = -2.0
-margin_right = 639.0
-margin_bottom = 362.0
+margin_left = -8.0
+margin_top = -8.0
+margin_right = 648.0
+margin_bottom = 376.0
 texture = ExtResource( 23 )
+expand = true
 
-[node name="main" type="TextureRect" parent="quest_decision"]
-margin_left = 80.0
-margin_top = 40.0
-margin_right = 558.0
-margin_bottom = 312.0
-texture = ExtResource( 21 )
+[node name="sprite" type="Sprite" parent="quest_decision"]
+position = Vector2( 88.0001, 40 )
+scale = Vector2( 6.45816, 6.45816 )
+texture = SubResource( 45 )
+hframes = 16
+vframes = 4
+
+[node name="chat" type="TextureRect" parent="quest_decision"]
+margin_left = 22.0
+margin_top = 16.0
+margin_right = 634.0
+margin_bottom = 364.0
+texture = ExtResource( 2 )
 expand = true
 
 [node name="quiz" type="Control" parent="quest_decision"]
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="wrong" type="Button" parent="quest_decision/quiz"]
-self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 160.0
-margin_top = 152.0
-margin_right = 488.0
-margin_bottom = 192.0
+[node name="pergunta" type="Label" parent="quest_decision/quiz"]
+margin_left = 104.0
+margin_top = 110.0
+margin_right = 553.0
+margin_bottom = 221.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 49 )
+text = "O Thomas lhe pediu ajuda, porém você está com a sua
+lista de tarefas cheia. Qual a melhor resolução de conflito
+nessa situação? 
+"
 
-[node name="right" type="Button" parent="quest_decision/quiz"]
-self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 160.0
-margin_top = 200.0
-margin_right = 488.0
-margin_bottom = 240.0
+[node name="quest" type="Control" parent="quest_decision/quiz"]
+margin_left = 104.0
+margin_top = 179.0
+margin_right = 144.0
+margin_bottom = 219.0
 
-[node name="wrong2" type="Button" parent="quest_decision/quiz"]
-self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 152.0
-margin_top = 256.0
-margin_right = 480.0
-margin_bottom = 296.0
+[node name="wrong" type="Button" parent="quest_decision/quiz/quest"]
+margin_right = 435.0
+margin_bottom = 41.0
+align = 2
+
+[node name="pergunta" type="Label" parent="quest_decision/quiz/quest"]
+margin_left = 4.0
+margin_top = -2.0
+margin_right = 431.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 49 )
+text = "Você sugere uma troca de atividades, na qual o Thomas realiza
+as suas tarefas em troca da ajuda que você irá oferecer. "
+
+[node name="quest2" type="Control" parent="quest_decision/quiz"]
+margin_left = 104.0
+margin_top = 231.0
+margin_right = 144.0
+margin_bottom = 271.0
+
+[node name="wrong2" type="Button" parent="quest_decision/quiz/quest2"]
+margin_right = 435.0
+margin_bottom = 41.0
+align = 2
+
+[node name="pergunta" type="Label" parent="quest_decision/quiz/quest2"]
+margin_left = 4.0
+margin_top = -2.0
+margin_right = 431.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 49 )
+text = "Você pede desculpas e diz que não pode ajudar o Thomas, pois 
+está muito atarefada "
+
+[node name="right" type="Control" parent="quest_decision/quiz"]
+margin_left = 104.0
+margin_top = 283.0
+margin_right = 144.0
+margin_bottom = 323.0
+
+[node name="right" type="Button" parent="quest_decision/quiz/right"]
+margin_right = 435.0
+margin_bottom = 41.0
+align = 2
+
+[node name="pergunta" type="Label" parent="quest_decision/quiz/right"]
+margin_left = 4.0
+margin_top = -2.0
+margin_right = 431.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 49 )
+text = "Você promete ajudar o Thomas agora, mas se estiver ocupada, 
+ele terá que ajudá-la com as tarefas."
 
 [node name="right_decision" type="Control" parent="."]
 visible = false
@@ -970,31 +1055,9 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="FundoJogo21" type="Sprite" parent="right_decision"]
-position = Vector2( 319.607, 181 )
-scale = Vector2( 0.623815, 0.61 )
-texture = ExtResource( 19 )
-
-[node name="img_right_decision" type="TextureRect" parent="right_decision"]
-margin_left = 19.0
-margin_top = 38.0
-margin_right = 617.0
-margin_bottom = 378.0
-texture = ExtResource( 22 )
-expand = true
-
-[node name="next_phase" type="Button" parent="right_decision"]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = 392.0
-margin_top = 328.0
-margin_right = 584.0
-margin_bottom = 352.0
-
-[node name="back_phase" type="Button" parent="right_decision"]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = 56.0
-margin_top = 328.0
-margin_right = 240.0
-margin_bottom = 352.0
+position = Vector2( 319, 180 )
+scale = Vector2( 1.01564, 1.03297 )
+texture = ExtResource( 35 )
 
 [node name="video_conteudo" type="VideoPlayer" parent="right_decision"]
 margin_left = 56.0
@@ -1004,15 +1067,33 @@ margin_bottom = 304.0
 autoplay = true
 
 [node name="LinkButton2" type="LinkButton" parent="right_decision"]
-margin_left = 69.0
-margin_top = 146.0
-margin_right = 501.0
-margin_bottom = 180.0
+margin_left = 68.0
+margin_top = 185.0
+margin_right = 500.0
+margin_bottom = 219.0
 focus_mode = 2
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 47 )
 text = "Clique aqui para acessar o conteúdo."
 underline = 1
+
+[node name="next_phase" type="TextureButton" parent="right_decision"]
+margin_left = 382.0
+margin_top = 248.0
+margin_right = 459.0
+margin_bottom = 289.0
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 13 )
+expand = true
+
+[node name="back_phase" type="TextureButton" parent="right_decision"]
+margin_left = 112.0
+margin_top = 251.0
+margin_right = 307.0
+margin_bottom = 294.0
+texture_normal = ExtResource( 31 )
+texture_pressed = ExtResource( 32 )
+expand = true
 
 [node name="wrong_decision" type="Control" parent="."]
 visible = false
@@ -1020,54 +1101,62 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="FundoJogo21" type="Sprite" parent="wrong_decision"]
-position = Vector2( 319.607, 181 )
-scale = Vector2( 0.623815, 0.61 )
-texture = ExtResource( 19 )
+position = Vector2( 320, 175 )
+scale = Vector2( 1.02969, 1.00688 )
+texture = ExtResource( 30 )
 
 [node name="img_wrong_decision" type="TextureRect" parent="wrong_decision"]
-margin_left = 22.0
-margin_top = 37.0
-margin_right = 624.0
-margin_bottom = 379.0
+margin_left = 34.0
+margin_top = 112.0
+margin_right = 636.0
+margin_bottom = 454.0
 texture = ExtResource( 24 )
 expand = true
 
-[node name="back_phase" type="Button" parent="wrong_decision"]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = 56.0
-margin_top = 328.0
-margin_right = 248.0
-margin_bottom = 352.0
-
-[node name="back_decision" type="Button" parent="wrong_decision"]
-self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 392.0
-margin_top = 332.0
-margin_right = 592.0
-margin_bottom = 352.0
-
 [node name="LinkButton" type="LinkButton" parent="wrong_decision"]
-margin_left = 29.0
-margin_top = 141.0
-margin_right = 461.0
-margin_bottom = 175.0
+margin_left = 54.0
+margin_top = 186.0
+margin_right = 486.0
+margin_bottom = 220.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 47 )
 text = "Clique aqui para acessar o conteúdo."
 underline = 1
 
+[node name="back_phase" type="TextureButton" parent="wrong_decision"]
+margin_left = 67.0
+margin_top = 254.0
+margin_right = 262.0
+margin_bottom = 297.0
+texture_normal = ExtResource( 31 )
+texture_pressed = ExtResource( 32 )
+expand = true
+
+[node name="back_decision" type="TextureButton" parent="wrong_decision"]
+margin_left = 390.0
+margin_top = 254.0
+margin_right = 581.0
+margin_bottom = 294.0
+texture_normal = ExtResource( 33 )
+texture_pressed = ExtResource( 34 )
+expand = true
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 25 )
+stream = ExtResource( 22 )
+autoplay = true
+
+[node name="botsaudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 26 )
 autoplay = true
 
 [connection signal="body_entered" from="cenario/icone_mesa/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="pressed" from="quest_work/quiz/button_quiz" to="." method="_on_button_quiz_pressed"]
-[connection signal="pressed" from="quest_decision/quiz/wrong" to="." method="_on_wrong_pressed"]
-[connection signal="pressed" from="quest_decision/quiz/right" to="." method="_on_right_pressed"]
-[connection signal="pressed" from="quest_decision/quiz/wrong2" to="." method="_on_wrong_pressed"]
+[connection signal="pressed" from="quest_decision/quiz/quest/wrong" to="." method="_on_wrong_pressed"]
+[connection signal="pressed" from="quest_decision/quiz/quest2/wrong2" to="." method="_on_wrong_pressed"]
+[connection signal="pressed" from="quest_decision/quiz/right/right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="right_decision/LinkButton2" to="." method="_on_LinkButton_pressed"]
 [connection signal="pressed" from="right_decision/next_phase" to="." method="_on_next_phase_pressed"]
 [connection signal="pressed" from="right_decision/back_phase" to="." method="_on_back_phase_pressed"]
-[connection signal="pressed" from="right_decision/LinkButton2" to="." method="_on_LinkButton_pressed"]
+[connection signal="pressed" from="wrong_decision/LinkButton" to="." method="_on_LinkButton_pressed"]
 [connection signal="pressed" from="wrong_decision/back_phase" to="." method="_on_back_phase_pressed"]
 [connection signal="pressed" from="wrong_decision/back_decision" to="." method="_on_back_decision_pressed"]
-[connection signal="pressed" from="wrong_decision/LinkButton" to="." method="_on_LinkButton_pressed"]

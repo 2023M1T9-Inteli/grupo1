@@ -26,9 +26,24 @@ func _process(delta):
 # func que controla a caixa de dialogo para aparecer apenas quando o jogador alcancar a posição da eli / Activates dialog box when player reaches Eli.
 func _physics_process(delta): 
 	$dialogo.visible = false 
+	
+	#aparecer dialogo quando jogador chegar em determinada posição / show dialog when player reaches position
 	if $protagonistaPlayer.position.x >= 360: 
 		$dialogo.visible = true 
 	
+	# quando  movimentos bloqueados nao aparecer botões de tutorial / when  movements locked, don't show tutorial buttons.
+	if Global.bloqueio:
+		$botTutorials/botesquerda.visible = false
+		$botTutorials/botdireita.visible = false
+		$botTutorials/bottab.visible = false
+	
+	#se não estiver bloqueado mostrar tutoriais / if unlocked show button tutorials
+	if not Global.bloqueio:
+		$botTutorials/botesquerda.visible = true
+		$botTutorials/botdireita.visible = true
+		$botTutorials/bottab.visible = true
+		$botTutorials/text_tutorial.visible = true
+		
 	# trocar para fase 1 / changes to phase 1
 	if $protagonistaPlayer.position.x >= 640: 
-		get_tree().change_scene("res://cenas/explicação1.tscn")
+		get_tree().change_scene("res://cenas//fase1_cenas/explicação1.tscn")

@@ -1,0 +1,10 @@
+[
+    {"Name": "Claudia ", "Text": "Olá, Rafa. Vejo que você está aproveitando seu tempo livre!"},
+    {"Name": "Claudia", "Text": "Mas tenho uma tarefa urgente para você."},
+    {"Name": "Rafa", "Text": "Olá, Claudia! Qual seria a tarefa?"},
+    {"Name": "Claudia", "Text": "Nosso cliente solicitou o desenvolvimento de um relatório muito importante para o projeto,"},
+    {"Name": "Claudia", "Text": "acho que você terá que ficar até mais tarde aqui na empresa."},
+    {"Name": "Rafa", "Text": "Entendi. Será que você não poderia ver com o Thomas ou André, "},
+    {"Name": "Rafa", "Text": "pois tenho médico marcado mais tarde, e não conseguirei agendar novamente"},
+    {"Name": "Claudia", "Text": "Você é a mais apta para a tarefa. Preciso que seja você nessa atividade."},
+]

@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 # "speed" é a velocidade do personagem, e speedauto é a velocidade da animação do personagem / "Speed" is the character speed and "speedauto" is the speed of the character automovement.
-var speedAutoRafa = 50
+var speedAutoRafa = 80
 
 # "speed" é uma variável inteira que armazena a velocidade do player em pixels por segundo / "speed" is an integer variables of the player speed in pixels  per second.
 var speedRafa = 100

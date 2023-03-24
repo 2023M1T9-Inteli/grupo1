@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/Ui/Tela final jogo.jpg" type="Texture" id=1]
+[ext_resource path="res://assets/fontes/Stacked pixel.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/characters/rafaProtagonista.png" type="Texture" id=3]
+[ext_resource path="res://scripts/final/telafinal.gd" type="Script" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "mexendo"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 1, 2.1, 3.3, 4.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 17, 3, 33, 3 ]
+}
+
+[sub_resource type="DynamicFont" id=2]
+size = 36
+font_data = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="fundo" type="Sprite" parent="."]
+position = Vector2( 324.396, 183.5 )
+scale = Vector2( 1.01374, 1.01374 )
+texture = ExtResource( 1 )
+
+[node name="rafa" type="Sprite" parent="."]
+position = Vector2( 131.25, 230.75 )
+scale = Vector2( 11.1458, 11.1458 )
+texture = ExtResource( 3 )
+hframes = 16
+vframes = 4
+frame = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="rafa"]
+autoplay = "mexendo"
+anims/mexendo = SubResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 315.0
+margin_top = 89.0
+margin_right = 565.0
+margin_bottom = 170.0
+custom_colors/font_color = Color( 0.737255, 0.152941, 0.152941, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "obrigado por 
+jogar!"
+align = 1
+valign = 1

@@ -29,7 +29,7 @@ func _ready():
 	
 func _process(delta):
 	# Verificando se o jogador pressionou a tecla "enter" / Check if wnter key is pressed.
-	if Global.final_dialogo == true:
+	if Global.final_dialogo == false:
 		phraseNum = 0
 		
 	if Input.is_action_just_pressed("ui_accept"):

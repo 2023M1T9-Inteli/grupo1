@@ -28,18 +28,19 @@ func _ready():
 func _process(delta):
 	if Global.final_dialogo == false:
 		# Se o personagem chegar na posição da cadeira, caixa de texto aparecerá iniciando o diálogo / When character reaches seat position, dialog box now visible and conversation starts.
-		if positionRafa.position.x >= 260 && positionRafa.position.y <= 280:
+		if positionRafa.position.x >= 260 && positionRafa.position.y >= 250:
 			# Caixa de texto se torna visível / Dialog box now visible.
 			$dialogo_1.visible = true 
 		else:
 			$dialogo_1.visible = false	
 	
-	if Global.final_dialogo == true:
+	if Global.icone_mesa == true:
 		$cenario/icone_mesa.visible = true
 		icon_table_area2d.monitoring = true
-		Global.final_dialogo = false
-	
+		Global.icone_mesa = false
+
 	if 	Global.final_dialog2 == true:
+		$cenario/icone_mesa.visible = false
 		$objects_cenario/papel_trabalho1.visible = true
 		$dialogo_2.visible = false
 		Global.step3_eli = true
@@ -82,29 +83,35 @@ func _on_button_quiz_pressed():
 	$objects_cenario/papel_trabalho2.visible = true
 	Global.npc_thomas_active = true
 	Global.dialogo3_thomas = true
+	$botsaudio.play()
 
 # Se a pessoa clicar na opção certa o usuário será levado para tela de feedback / When player presses correct answers, feedback is displayed.
 func _on_right_pressed():
 	$quest_decision.visible = false
 	$right_decision.visible = true
+	$botsaudio.play()
 
 # Botão "incorreto pressionado". / Wrong button pressed.
 func _on_wrong_pressed():
 	$quest_decision.visible = false
 	$wrong_decision.visible = true
+	$botsaudio.play()
 
 #Botão de proxima fase pressionado. [WIP] / Next level button [WIP]
 func _on_next_phase_pressed():
-	get_tree().change_scene("res://cenas/explicação2.tscn")
+	get_tree().change_scene("res://cenas/fase2_cenas/explicação2.tscn")
+	$botsaudio.play()
 
 #Botão de retorno a fase pressionado. / Return button pressed.
 func _on_back_phase_pressed():
 	get_tree().reload_current_scene()
+	$botsaudio.play()
 
 #Botão de retorno a decisão pressionado. / Return button pressed.
 func _on_back_decision_pressed():
 	$quest_decision.visible = true
 	$wrong_decision.visible = false
+	$botsaudio.play()
 
 # Texto com link conectado que leva para o conteúdo / Text with a connected link that takes to the content
 func _on_LinkButton_pressed():

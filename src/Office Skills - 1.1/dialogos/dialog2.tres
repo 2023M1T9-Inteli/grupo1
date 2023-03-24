@@ -1,11 +1,4 @@
 [
-    {"Name":"Eli","Text": "Essa é sua mesa de trabalho, gostou??"},
-    {"Name":"Rafa","Text": "Que legal, é bem aconchegante!"},
-    {"Name":"Eli","Text": "Sim, é importante que você se sinta confortável aqui. E lembre-se, se precisar de algo, pode contar comigo!"},
-    {"Name":"Rafa","Text": "Obrigada, Eli! Isso é muito gentil da sua parte!"},
-    {"Name":"Eli","Text": "De nada, Rafa! Agora, tenho aqui uma pilha de papéis que precisam ser documentados no computador."},
-    {"Name":"Eli","Text": "Será que você pode cuidar disso para mim?"},
-    {"Name":"Rafa","Text": "Claro, Eli! Entregarei esses documentos o mais rápido possível!"},
-    {"Name":"Eli","Text": "Ótimo, Rafa! Tenha um ótimo dia e lembre-se de me avisar se precisar de ajuda!"},
-    {"Name":"Rafa","Text":"Obrigada, Eli! Até mais!"},
+     {"Name":"Eli","Text": "Por enquanto, faça a atividade que deixei na sua mesa."},
+     {"Name":"Eli","Text": "Maravilha! Vou voltar ao RH, até mais!"}
 ]
