@@ -1,7 +1,7 @@
 [gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://assets/6_Office_Designs/parede_e_movel_cenario1.png" type="Texture" id=1]
-[ext_resource path="res://assets/Ui/fundo baixo esquerda vermelho.jpeg" type="Texture" id=2]
+[ext_resource path="res://assets/Ui/fundonovobaixoe.jpeg" type="Texture" id=2]
 [ext_resource path="res://assets/buttons/Keyboard Letters and Symbols.png" type="Texture" id=3]
 [ext_resource path="res://assets/aúdios/Music_Game_-_5.mp3" type="AudioStream" id=4]
 [ext_resource path="res://assets/characters/Eli.png" type="Texture" id=5]

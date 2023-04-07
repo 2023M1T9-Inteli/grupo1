@@ -55,17 +55,17 @@ text = "50%"
 
 [node name="Continuar" type="TextureButton" parent="."]
 margin_left = 264.0
-margin_top = 104.0
+margin_top = 80.0
 margin_right = 365.0
-margin_bottom = 144.0
+margin_bottom = 120.0
 texture_normal = ExtResource( 14 )
 texture_pressed = ExtResource( 13 )
 
 [node name="Reiniciar" type="TextureButton" parent="."]
 margin_left = 268.0
-margin_top = 143.0
+margin_top = 117.0
 margin_right = 364.0
-margin_bottom = 183.0
+margin_bottom = 157.0
 texture_normal = ExtResource( 15 )
 texture_pressed = ExtResource( 12 )
 

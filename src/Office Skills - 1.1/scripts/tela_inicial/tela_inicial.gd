@@ -111,3 +111,7 @@ func _on_fase4_bot_pressed():
 func _on_fase5_bot_pressed():
 	get_tree().change_scene("res://cenas/fase5_cenas/explicação5.tscn")
 	$botsaudio.play()
+
+
+func _on_inteli_pressed():
+	OS.shell_open("https://www.inteli.edu.br/")

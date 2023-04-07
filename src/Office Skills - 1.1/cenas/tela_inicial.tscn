@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://scripts/tela_inicial/tela_inicial.gd" type="Script" id=1]
 [ext_resource path="res://assets/Ui/inicio_novo.png" type="Texture" id=2]
@@ -39,6 +39,10 @@
 [ext_resource path="res://assets/Ui/notastela.png" type="Texture" id=37]
 [ext_resource path="res://assets/aúdios/botões no pause.wav" type="AudioStream" id=38]
 [ext_resource path="res://assets/Ui/fase5tela.png" type="Texture" id=39]
+[ext_resource path="res://assets/buttons/tutorialbot.png" type="Texture" id=40]
+[ext_resource path="res://assets/buttons/tutorialbotp.png" type="Texture" id=41]
+[ext_resource path="res://assets/buttons/botiintelip.png" type="Texture" id=42]
+[ext_resource path="res://assets/buttons/botinteli.png" type="Texture" id=43]
 
 [sub_resource type="Animation" id=4]
 resource_name = "Idle"
@@ -144,7 +148,6 @@ scale = Vector2( 1.01563, 1.02473 )
 texture = ExtResource( 9 )
 
 [node name="btn_fases" type="TextureButton" parent="."]
-visible = false
 margin_left = 2.0
 margin_top = 260.0
 margin_right = 71.0
@@ -163,9 +166,9 @@ texture_pressed = ExtResource( 11 )
 
 [node name="botcontroles" type="TextureButton" parent="."]
 margin_left = 1.0
-margin_top = 326.0
+margin_top = 327.0
 margin_right = 118.0
-margin_bottom = 366.0
+margin_bottom = 367.0
 texture_normal = ExtResource( 12 )
 texture_pressed = ExtResource( 13 )
 
@@ -199,12 +202,12 @@ anchor_left = 0.485
 anchor_top = 0.566
 anchor_right = 0.485
 anchor_bottom = 0.566
-margin_left = -1209.46
-margin_top = -59.408
-margin_right = -416.456
-margin_bottom = 342.592
-texture_normal = ExtResource( 17 )
-texture_pressed = ExtResource( 16 )
+margin_left = -1241.85
+margin_top = -59.405
+margin_right = -350.853
+margin_bottom = 326.595
+texture_normal = ExtResource( 40 )
+texture_pressed = ExtResource( 41 )
 expand = true
 
 [node name="fase1" type="Sprite" parent="fasestela"]
@@ -366,10 +369,10 @@ scale = Vector2( 1.07418, 1.07418 )
 texture = ExtResource( 37 )
 
 [node name="Label2" type="Label" parent="sobrenos"]
-margin_left = -139.642
-margin_top = -83.7852
-margin_right = 98.358
-margin_bottom = 174.215
+margin_left = -218.772
+margin_top = -84.7158
+margin_right = 19.2285
+margin_bottom = 172.284
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 9 )
 text = "Beatriz Monsanto
@@ -386,15 +389,24 @@ align = 1
 valign = 1
 
 [node name="Label" type="Label" parent="sobrenos"]
-margin_left = -219.703
-margin_top = -130.332
-margin_right = 178.297
-margin_bottom = -70.3325
+margin_left = -296.971
+margin_top = -132.194
+margin_right = 101.029
+margin_bottom = -72.1944
 custom_colors/font_color = Color( 0.745098, 0.168627, 0.168627, 1 )
 custom_fonts/font = SubResource( 10 )
 text = "Grupo 1 - Turma 9 2023 Criadores:"
 align = 1
 valign = 1
+
+[node name="inteli" type="TextureButton" parent="sobrenos"]
+margin_left = 29.7902
+margin_top = 0.930939
+margin_right = 204.79
+margin_bottom = 46.9309
+texture_normal = ExtResource( 43 )
+texture_pressed = ExtResource( 42 )
+expand = true
 
 [node name="botsair" type="TextureButton" parent="."]
 visible = false
@@ -422,4 +434,5 @@ autoplay = true
 [connection signal="pressed" from="fasestela/fase4/fase4_bot" to="." method="_on_fase4_bot_pressed"]
 [connection signal="pressed" from="fasestela/fase5/fase5_bot" to="." method="_on_fase5_bot_pressed"]
 [connection signal="pressed" from="fasestela/sairfases" to="." method="_on_sairfases_pressed"]
+[connection signal="pressed" from="sobrenos/inteli" to="." method="_on_inteli_pressed"]
 [connection signal="pressed" from="botsair" to="." method="_on_botsair_pressed"]

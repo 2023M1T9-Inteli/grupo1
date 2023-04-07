@@ -1,7 +1,7 @@
 [gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://assets/mapas/fase4.png" type="Texture" id=1]
-[ext_resource path="res://assets/Ui/fundo alto direita vermelho.jpeg" type="Texture" id=2]
+[ext_resource path="res://assets/Ui/fundonovocimad.jpeg" type="Texture" id=2]
 [ext_resource path="res://scripts/Dialog1_0.gd" type="Script" id=3]
 [ext_resource path="res://assets/aúdios/botões no pause.wav" type="AudioStream" id=4]
 [ext_resource path="res://assets/fontes/VT323-Regular.ttf" type="DynamicFontData" id=5]
@@ -238,7 +238,7 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="fundo" type="Sprite" parent="cenario"]
-position = Vector2( 320, 184 )
+position = Vector2( 320, 180 )
 scale = Vector2( 0.622708, 0.61 )
 texture = ExtResource( 2 )
 

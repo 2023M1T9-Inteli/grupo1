@@ -1,5 +1,9 @@
 extends Node2D
 
+onready var positionRafa = get_node("Personagens/fase1_rafa_protagonista")
+onready var rafaposition = get_node("Personagens/fase1_rafa_protagonista")
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$quest_decision.visible = false	
@@ -48,4 +52,7 @@ func _on_Area2D_body_entered(body):
 	$dialogo_1.visible = true
 	$icone_mesa.visible = false
 	$dialogo_1.visible = true
+	$personagens/fase1_rafa_protagonista.position.x = 583
+	$personagens/fase1_rafa_protagonista.position.y = 217
+
 
