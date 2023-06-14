@@ -1,28 +1,29 @@
-# Inteli - Instituto de Tecnologia e Liderança 
-# Scrip de exemplo, modifique de acordo com seu grupo #
-
+# Inteli - Instituto de Tecnologia e Liderança
 
 <p align="center">
-<a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
+<a href= "https://www.inteli.edu.br/"><img src="https://s3.amazonaws.com/gupy5/production/companies/26702/career/63484/images/2022-04-28_16-56_logo.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Office Skills
+# Nome do Projeto: Office Skills
 
-## Cia De Skills
+## Nome do Grupo: Cia De Skills
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Nicollas Isaac</a>, <a href="https://www.linkedin.com/in/victorbarq/">Michel Khafif</a>, <a href="https://www.linkedin.com/in/victorbarq/">Lucas Rego</a>, <a href="https://www.linkedin.com/in/victorbarq/">Pedro Lima</a>, <a href="https://www.linkedin.com/in/victorbarq/">Guilherme Linhares</a>, <a href="https://www.linkedin.com/in/victorbarq/">Luiz Leao</a>, <a href="https://www.linkedin.com/in/victorbarq/">Beatriz Monsanto</a>, <a href="https://www.linkedin.com/in/victorbarq/">Lidia Mariano</a>
+## Integrantes: 
+
+<a href="https://www.linkedin.com/in/nicollas-isaac/">Nicollas Isaac</a>, 
+<a href="https://www.linkedin.com/in/michel-menahem-khafif-512791201/">Michel Khafif</a>, 
+<a href="https://www.linkedin.com/in/lucas-rego-90469a271/">Lucas Rego</a>, 
+<a href="https://www.linkedin.com/in/pedro-henrique-oliveira-lima-a6a766214/">Pedro Lima</a>, 
+<a href="https://www.linkedin.com/in/guilherme-ferreira-linhares-8638411a1/">Guilherme Linhares</a>, 
+<a href="https://www.linkedin.com/in/luiz-fernando-villa%C3%A7a-le%C3%A3o-930568271/">Luiz Leao</a>, 
+<a href="https://www.linkedin.com/in/beatriz-monsanto-5a3a83267/">Beatriz Monsanto</a>, 
+<a href="https://www.linkedin.com/in/lidia-mariano-b68282264/">Lidia Mariano</a>
 
 ## Descrição
 
 📜 Descrição curta sobre o que seu projeto faz.
 <br><br>
 Meu projeto é um exemplo de como utilizar o github.
-<br><br>
-<p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
-  Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
-</p>
-
 
 💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
 <br><br>
@@ -30,6 +31,10 @@ Meu projeto ajuda estudantes inteli a configurarem seus githubs.
 <br><br>
 May the force be with you!
 <br><br>
+
+## 🎮 Jogue agora
+
+Para acessar o jogo diretamente do seu navegador entre no seguinte link: [Office Skills](https://2023m1t9-inteli.github.io/grupo1/)
 
 ## 🛠 Estrutura de pastas
 
@@ -108,7 +113,16 @@ A cada atualização os detalhes devem ser lançados aqui.
 
 ## 📋 Licença/License
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">MODELO GIT INTELI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">INTELI, VICTOR BRUNO ALEXANDER ROSETTI DE QUIROZ</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/2023M1T6-Inteli/grupo1">Cia de Skills</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/InteliProjects">Inteli</a>,
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/nicollas-isaac/">Nicollas Isaac</a>,
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/michel-menahem-khafif-512791201/">Michel Khafif</a>,
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/lucas-rego-90469a271/">Lucas Rego</a>,
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/pedro-henrique-oliveira-lima-a6a766214/">Pedro Lima</a>,
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/guilherme-ferreira-linhares-8638411a1/">Guilherme Linhares</a>,
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/luiz-fernando-villa%C3%A7a-le%C3%A3o-930568271/">Luiz Leão</a>,
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/beatriz-monsanto-5a3a83267/">Beatriz Monsanto</a>,
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/lidia-mariano-b68282264/">Lidia Mariano</a>
+is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
 
 ## 🎓 Referências
 
